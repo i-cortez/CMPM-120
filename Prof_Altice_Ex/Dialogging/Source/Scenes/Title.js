@@ -18,7 +18,7 @@ class Title extends Phaser.Scene
     preload()
     {
         // load JSON data (dialogue)
-        this.load.json("dialogue", "./Data/JSON/dialog.json");
+        this.load.json("dialog", "./Data/JSON/dialog.json");
 
         // load the images
         this.load.path = "./Assets/";

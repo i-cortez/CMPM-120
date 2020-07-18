@@ -53,7 +53,7 @@ class Talking extends Phaser.Scene
     create()
     {
         // parse dialog from JSON file
-        this.dialog = this.cache.json.get("dialogue");
+        this.dialog = this.cache.json.get("dialog");
         console.log(this.dialog);
 
         // add dialog box sprite
@@ -184,8 +184,7 @@ class Talking extends Phaser.Scene
         else
         {
             // if not, set current speaker
-            this.dialogSpeaker =
-            this.dialog[this.dialogConvo][this.dialogLine]["speaker"];
+            this.dialogSpeaker = this.dialog[this.dialogConvo][this.dialogLine]["speaker"];
 
             // check if there's a new speaker (for exit/enter animations)
             if(this.dialog[this.dialogConvo][this.dialogLine]["newSpeaker"])
@@ -208,8 +207,8 @@ class Talking extends Phaser.Scene
                 this.tweens.add
                 (
                     {
-                        targets: this[this.dialogLastSpeaker],
-                        x: this.OFFSCREEN_X,
+                        targets: this[this.dialogSpeaker],
+                        x: this.DBOX_X + 50,
                         duration: this.tweenDuration,
                         ease: "Linear"
                     }
@@ -217,10 +216,7 @@ class Talking extends Phaser.Scene
             }
 
             // build dialog (concatenate speaker + line of text)
-            this.dialogLines =
-            this.dialog[this.dialogConvo][this.dialogLine]["speaker"]
-            .toUpperCase() +
-            this.dialog[this.dialogConvo][this.dialogLine]["dialogue"];
+            this.dialogLines = this.dialog[this.dialogConvo][this.dialogLine]["speaker"].toUpperCase() + ": " + this.dialog[this.dialogConvo][this.dialogLine]["dialog"];
 
             // create a timer to iterate through each letter in the dialog
             let currentChar = 0;
