@@ -1,0 +1,24 @@
+[
+    [
+        {
+            "speaker": "agent",
+            "dialogue": "I knock a couple times on the door but there is no sound coming from inside. After waiting a bit my patience ran out, I try to open the door and found it unlocked.",
+            "newSpeaker": "false"
+        },
+        {
+            "speaker": "agent",
+            "dialogue": "After waiting a bit my patience ran out, I try to open the door and found it unlocked.",
+            "newSpeaker": "false"
+        },
+        {
+            "speaker": "agent",
+            "dialogue": "The place was a mess, it seemed like someone scrambled to leave or maybe...",
+            "newSpeaker": "false"
+        },
+        {
+            "speaker": "agent",
+            "dialogue": "Someone had tossed the place looking for something and I already had a suspect in mind...",
+            "newSpeaker": "false"
+        }
+    ]
+]
